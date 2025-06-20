@@ -1,15 +1,33 @@
 function checkAnswer() {
-    let correctAnswer = "4";
-}
+    // Declare the correct answer inside the function
+    const correctAnswer = "4";
 
-const radioButtons = document.querySelectorAll('input[name="quiz"]');
+    // Get all radio buttons with name="quiz"
+    const radioButtons = document.getElementsByName("quiz");
+    let userAnswer = '';
 
-const radios = document.getElementsByName('quiz');
-let userAnswer = '';
+    // Loop to find which radio is selected
+    for (let i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+            userAnswer = radioButtons[i].value;
+            break;
+        }
+    }
 
-for (let index = 0; index < radios.length; index++) {
-    if (radios[index].checked) {
-        userAnswer = radios[index].value;
-        break;
+    // Compare user's answer with the correct answer
+    const feedback = document.getElementById("feedback");
+    if (userAnswer === correctAnswer) {
+        feedback.textContent = "Correct! Well done.";
+    }   else {
+        feedback.textContent = "That's incorrect. Try again!";
+        feedback.style.color = "#dc3545"; // Optional: red for incorrect
     }
 }
+
+// Attach the event listener once the DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const submitButton = document.getElementById("submit-answer");
+    submitButton.addEventListener("click", checkAnswer);
+});
+
+

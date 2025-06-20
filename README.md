@@ -33,4 +33,31 @@ This project implements a simple JavaScript function named `checkAnswer` for a q
   <button type="button" id="submit-answer">Submit Answer</button>
 </form>
 <p id="feedback"></p>
+# 🧮 Simple Calculator
+
+This project is a basic JavaScript calculator that performs four arithmetic operations: **addition**, **subtraction**, **multiplication**, and **division**.
+
+---
+
+## 🚀 Features
+
+- Add two numbers
+- Subtract one number from another
+- Multiply two numbers
+- Divide one number by another
+- Display the result dynamically on the page
+
+---
+
+## 🛠️ Implementation Details
+
+### ✅ Arithmetic Functions
+
+Each arithmetic operation is implemented as its own function:
+
+```javascript
+function add(number1, number2) {
+    return number1 + number2;
+}
+
 
