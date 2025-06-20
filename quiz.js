@@ -3,7 +3,7 @@ function checkAnswer() {
     const correctAnswer = "4";
 
     // Get all radio buttons with name="quiz"
-    const radioButtons = document.querySelector('input[name=quiz]');
+    const radioButtons = document.querySelector('input[name="quiz"]');
     let userAnswer = '';
 
     // Loop to find which radio is selected
