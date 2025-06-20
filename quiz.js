@@ -13,14 +13,12 @@ function checkAnswer() {
             break;
         }
     }
-
-    // Compare user's answer with the correct answer
+    
     const feedback = document.getElementById("feedback");
     if (userAnswer === correctAnswer) {
         feedback.textContent = "Correct! Well done.";
-    }   else {
+    } else {
         feedback.textContent = "That's incorrect. Try again!";
-        feedback.style.color = "#dc3545"; // Optional: red for incorrect
     }
 }
 
